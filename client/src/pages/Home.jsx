@@ -56,7 +56,7 @@ function Home() {
           transition={{ type: "spring", damping: 25, stiffness: 120, delay: 0.15 }}
           className="text-xl md:text-2xl text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed font-semibold opacity-90"
         >
-          Explore charities, understand how our draws work, and start a subscription to wining.
+          Explore charities, understand how our draws work, and start a subscription to win.
         </motion.p>
         <motion.div
           initial={{ y: 10, opacity: 0 }}
