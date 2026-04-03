@@ -22,43 +22,43 @@ function Home() {
 
   return (
     <div className="min-h-screen font-sans">
-      
+
       {/* 1. HERO SECTION */}
       <section className="relative px-6 pt-32 pb-24 max-w-6xl mx-auto text-center flex flex-col items-center z-10 overflow-hidden">
         {/* Layered Background Orbs */}
-        <motion.div 
-          animate={{ 
+        <motion.div
+          animate={{
             scale: [1, 1.2, 1],
-            opacity: [0.1, 0.15, 0.1] 
+            opacity: [0.1, 0.15, 0.1]
           }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-emerald-500/10 blur-[120px] rounded-full -z-10"
         ></motion.div>
-        
-        <motion.div 
+
+        <motion.div
           animate={{ rotate: 360 }}
           transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
           className="absolute top-[40%] left-[30%] w-[300px] h-[300px] bg-cyan-500/10 blur-[100px] rounded-full -z-10"
         ></motion.div>
 
-        <motion.h1 
+        <motion.h1
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ type: "spring", damping: 25, stiffness: 120, delay: 0.05 }}
           className="text-6xl md:text-8xl font-black tracking-tighter text-white mb-8 drop-shadow-[0_0_30px_rgba(255,255,255,0.1)]"
         >
-          Welcome to the <br/><span className="neon-text-gradient italic">Golf Charity Platform</span>
+          Welcome to the <br /><span className="neon-text-gradient italic">Golf Charity Platform</span>
         </motion.h1>
-        
-        <motion.p 
+
+        <motion.p
           initial={{ y: 15, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ type: "spring", damping: 25, stiffness: 120, delay: 0.15 }}
           className="text-xl md:text-2xl text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed font-semibold opacity-90"
         >
-          Explore charities, understand how our draws work, and start a subscription to win.
+          Explore charities, understand how our draws work, and start a subscription to wining.
         </motion.p>
-        <motion.div 
+        <motion.div
           initial={{ y: 10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ type: "spring", damping: 25, stiffness: 120, delay: 0.25 }}
@@ -112,7 +112,7 @@ function Home() {
 
       {/* 2. HOW IT WORKS */}
       <section className="py-24 px-6 max-w-6xl mx-auto relative z-10">
-        <motion.h2 
+        <motion.h2
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -120,8 +120,8 @@ function Home() {
         >
           How It Works
         </motion.h2>
-        
-        <motion.div 
+
+        <motion.div
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.05 }}
@@ -139,7 +139,7 @@ function Home() {
             { step: '02', title: 'Monthly Draws', desc: 'Active subscribers are automatically entered into our monthly prize draws.' },
             { step: '03', title: 'Win & Support', desc: 'Win cash prizes while a percentage of your subscription goes to your selected charity.' }
           ].map((item, i) => (
-            <motion.div 
+            <motion.div
               key={i}
               variants={{
                 hidden: { y: 15, opacity: 0 },
@@ -149,7 +149,7 @@ function Home() {
             >
               {/* Scanning Shine Effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-emerald-500/5 to-transparent -translate-x-[200%] group-hover:translate-x-[200%] transition-transform duration-1000 ease-in-out"></div>
-              
+
               <div className="w-20 h-20 rounded-2xl bg-slate-950/80 border border-slate-800 text-emerald-400 flex items-center justify-center font-black text-3xl mb-8 group-hover:scale-110 group-hover:border-emerald-500/50 group-hover:shadow-[0_0_30px_rgba(16,185,129,0.3)] transition-all duration-500 relative">
                 <div className="absolute inset-0 bg-emerald-500/10 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 {item.step}
@@ -162,7 +162,7 @@ function Home() {
       </section>
 
       {/* 3. CHARITY IMPACT SECTION */}
-      <motion.section 
+      <motion.section
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -172,18 +172,18 @@ function Home() {
         <div className="absolute inset-0 bg-slate-950 border-y border-slate-800/50 backdrop-blur-sm -z-10"></div>
         {/* Background Grid Pattern */}
         <div className="absolute inset-0 opacity-[0.03] -z-10" style={{ backgroundImage: 'radial-gradient(circle, #10b981 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
-        
+
         <div className="max-w-5xl mx-auto text-center relative z-10">
-          <motion.div 
+          <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             viewport={{ once: true }}
             className="inline-flex items-center gap-4 bg-emerald-500/5 border border-emerald-500/20 rounded-full px-8 py-3 mb-12 shadow-[0_0_30px_rgba(16,185,129,0.1)]"
           >
-             <span className="w-3 h-3 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_15px_rgba(52,211,153,0.9)]"></span>
-             <span className="text-[10px] font-black tracking-[0.2em] text-emerald-400 uppercase">Live Ecosystem Hub</span>
+            <span className="w-3 h-3 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_15px_rgba(52,211,153,0.9)]"></span>
+            <span className="text-[10px] font-black tracking-[0.2em] text-emerald-400 uppercase">Live Ecosystem Hub</span>
           </motion.div>
-          <motion.h2 
+          <motion.h2
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
@@ -191,7 +191,7 @@ function Home() {
           >
             Platform <span className="neon-text-gradient">Concept</span>
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
@@ -205,7 +205,7 @@ function Home() {
 
       {/* 4. TRUST SECTION */}
       <section className="py-20 px-6 max-w-5xl mx-auto relative z-10">
-        <motion.div 
+        <motion.div
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
@@ -219,28 +219,28 @@ function Home() {
           className="grid md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-slate-800"
         >
           <motion.div variants={{ hidden: { y: 20, opacity: 0 }, show: { y: 0, opacity: 1 } }} className="p-4 flex flex-col items-center gap-4 group">
-             <div className="w-16 h-16 rounded-2xl glass-panel flex items-center justify-center text-cyan-400 group-hover:scale-110 group-hover:text-cyan-300 transition-all duration-300">
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-             </div>
-              <p className="font-bold text-slate-300 text-lg">Transparent Monthly Draws</p>
+            <div className="w-16 h-16 rounded-2xl glass-panel flex items-center justify-center text-cyan-400 group-hover:scale-110 group-hover:text-cyan-300 transition-all duration-300">
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+            </div>
+            <p className="font-bold text-slate-300 text-lg">Transparent Monthly Draws</p>
           </motion.div>
           <motion.div variants={{ hidden: { y: 20, opacity: 0 }, show: { y: 0, opacity: 1 } }} className="p-4 flex flex-col items-center gap-4 group">
-             <div className="w-16 h-16 rounded-2xl glass-panel flex items-center justify-center text-emerald-400 group-hover:scale-110 group-hover:text-emerald-300 transition-all duration-300">
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
-             </div>
-              <p className="font-bold text-slate-300 text-lg">Verified Winners List</p>
+            <div className="w-16 h-16 rounded-2xl glass-panel flex items-center justify-center text-emerald-400 group-hover:scale-110 group-hover:text-emerald-300 transition-all duration-300">
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
+            </div>
+            <p className="font-bold text-slate-300 text-lg">Verified Winners List</p>
           </motion.div>
           <motion.div variants={{ hidden: { y: 20, opacity: 0 }, show: { y: 0, opacity: 1 } }} className="p-4 flex flex-col items-center gap-4 group">
-             <div className="w-16 h-16 rounded-2xl glass-panel flex items-center justify-center text-blue-400 group-hover:scale-110 group-hover:text-blue-300 transition-all duration-300">
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
-             </div>
-              <p className="font-bold text-slate-300 text-lg">Secure Payment System</p>
+            <div className="w-16 h-16 rounded-2xl glass-panel flex items-center justify-center text-blue-400 group-hover:scale-110 group-hover:text-blue-300 transition-all duration-300">
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+            </div>
+            <p className="font-bold text-slate-300 text-lg">Secure Payment System</p>
           </motion.div>
         </motion.div>
       </section>
 
       {/* 5. CTA SECTION */}
-      <motion.section 
+      <motion.section
         initial={{ y: 50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
@@ -248,7 +248,7 @@ function Home() {
         className="py-28 px-6 text-center mt-12 relative z-10 overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/40 to-slate-950 -z-10"></div>
-        <h2 className="text-4xl md:text-5xl font-black mb-10 tracking-tight text-white">Start your subscription <br/> today.</h2>
+        <h2 className="text-4xl md:text-5xl font-black mb-10 tracking-tight text-white">Start your subscription <br /> today.</h2>
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <Link
             to="/subscribe"
